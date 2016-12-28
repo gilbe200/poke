@@ -8,7 +8,10 @@ $("#my-button").click(function(){
     method: "GET",
     url: myUrl,
     success: function(data){
-      console.log(data);
+      $("#poke-name").html(data.name);
+      
+      $("#poke-img").attr("src", data.sprites.front_default);
+      
     }
   });
   
